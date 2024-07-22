@@ -1,0 +1,47 @@
+.navbar-item a {
+    text-decoration: none;
+    margin-left: 4rem;
+    color: #f6f3f3b5;
+
+}
+.tt-white {
+    color:white
+}
+.icon-height {
+    height: 30px;
+}
+.img-height-1 {
+    height: 100px;
+}
+.img-height-3 {
+    height: 300px;
+}
+.portfolio-bg-image {
+    background-image: url('../../../media/uploads/alejandro-escamilla-tAKXap853rY-unsplash.jpg');
+}
+.card-cover {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.btn-outline-info{
+    color: #0dcaf0;
+    border-color: #0dcaf0;
+}
+.btn-transparent{
+    border: 1px solid #fff;
+    color: #fff;
+}
+.btn-transparent:hover{
+    background-color: #fff;
+    color: #000;
+}
+.form_class{
+    width: 100%;
+}
+.form_label_height{
+    height: 50px;
+}
+.btn-contact{
+    margin-bottom: 100px;
+}

@@ -1,0 +1,100 @@
+{% extends 'pages/base.html' %}
+{% block page %}
+
+<main class="px-3">
+    <div class="container py-5">
+        <div class="row py-lg-5">
+            <div class="col-lg-5 col-md-5  mx-auto my-auto text-end">
+                <h1>I'm Devi Raju</h1>
+                <p class="lead text-white-50">Pythonista-in-progress </p>
+                <p>
+                    <a href="{% url 'projects:projects_index' %}" class="btn btn-secondary text-white my-2">projects</a>
+                </p>
+            </div>
+            <div class="col-lg-6 col-md-6 mx-auto">
+                <img src="/media/developer.png" class="img-fluid img-height-3"> <!--Girl icons created by mynamepong - Flaticon-->
+            </div>
+        </div>
+
+    </div>
+    <div class="container px-4 py-5 my-5 text-center">
+        <h1 class="display-5 fw-bold pb-4">About me</h1>
+        <div class="col-lg-8 mx-auto">
+            <p class="lead mb-4">Experienced Web Developer with passion for creating attractive and interactive websites meeting customer needs and exceeding expectations. <br>Excels in HTML, CSS, JavaScript and Python development.</p>
+        </div>
+    </div>
+   
+  
+    <div class="container">
+        <div class="row pb-4 text-center">
+            <div class="col-md-2 offset-md-2">
+                <img src="/media/python.png" class="img-height-1 img-fluid">
+                <p>Python</p>
+            </div>
+            <div class="col-md-2">
+                <img src='/media/djangoproject.512x512.png' class="img-height-1 img-fluid">
+                <p>Django</p>
+            </div>
+            <div class="col-md-2">
+                <img src="/media/bootstrap.png" class="img-height-1 img-fluid">
+                <p>Bootstrap</p>
+            </div>
+            <div class="col-md-2">
+                <img src="/media/1174949_js_react js_logo_react_react native_icon.png" class="img-height-1 img-fluid">
+                <p>React</p>
+            </div>
+        </div>
+        <div class="row pb-4 text-center">
+            <div class="col-md-2 offset-md-3">
+                <img src="/media/PostgreSQL_logo.3colors.540x557.png" class="img-height-1 img-fluid">
+                <p>PostgreSQL</p>
+            </div>
+            <div class="col-md-2">
+                <img src="/media/logo-mysql-170x115.png" class="img-height-1 img-fluid">
+                <p>MySQL</p>
+            </div>
+            <div class="col-md-2">
+                <img src="/media/github-mark-white.png" class="img-height-1 img-fluid">
+                <p>GitHub</p>
+            </div>
+           
+           
+        </div>
+    </div>
+    <div class="container album py-5 bg-muted">
+        <div class="container">
+            <h1 class="display-5 fw-bold text-center pb-4 my-4">Projects</h1>
+            <div class="row">
+                {% for project in projects %}
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <img class="card-img-top" src="{{ project.image.url }}" alt="Devi Project images">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h4>{{ project.name }}</h4>
+                                <div class="btn-group">
+                                    <a href="{% url 'projects:projects_detail' project.pk %}"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                                    <a href=""><button type="button" class="btn btn-sm btn-outline-secondary">GitHub</button></a>
+                                </div>
+                               
+                            </div>
+                            <p class="card-text">
+                                This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                            </p>
+                          
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="container px-4 my-5 text-center">
+        <h1 class="display-5 pb-4 fw-bold">Contact</h1>
+        <div class="col-lg-8 mx-auto">
+           <a href="{% url 'contact:contact_view' %}" class="btn btn-transparent">Say Hi <img class="icon-height" src="/media/wave.png"><!--Hello icons created by Kalashnyk - Flaticon--></a>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

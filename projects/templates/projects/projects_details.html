@@ -1,0 +1,20 @@
+{% extends 'pages/base.html' %}
+
+{% block page %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 offset-md-1">
+            <img src="{{ project.image.url }} "class="img-fluid">
+        </div>
+        <div class="col-md-4 offset-md-1">
+            <h2>{{ project.name }}</h2>
+            <p class="card-text">{{ project.desc }}</p>
+            <p class="card-text"> {{ project.tech }}</p>
+            <a href="{% url 'projects:projects_index' %}">Back</a>
+        </div>
+    </div>
+</div>
+    
+   
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'pages/base.html' %}
+
+{% block page %}
+<h1>Python Exercises</h1>
+<div class="container-fluid">
+    <div class="row">
+        {% for exercise in exercises %}
+        <div class="col-md-12">
+            <div class="card">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{{ exercise.title }} 
+                        <a class="btn btn-primary" href="{% url 'exercises:exercises_details' exercise.pk %}">See the solution</a>
+                    </li>
+                </ul>
+              </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+{% endblock %}
